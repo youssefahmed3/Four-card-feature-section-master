@@ -1,0 +1,200 @@
+/* Size */
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+/* Primary */
+/*  Neutral */
+*, *::before, *::after {
+  font-family: "Poppins", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 300px auto;
+      grid-template-rows: 300px auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+}
+
+.supervisor {
+  border-top: 6px solid #45d3d3;
+}
+
+.team-builder {
+  border-top: 6px solid #ea5353;
+}
+
+.karma {
+  border-top: 6px solid #fcaf4a;
+}
+
+.calculator {
+  border-top: 6px solid #549ef2;
+}
+
+@media screen and (min-width: 1000px) {
+  .supervisor {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3 / 5;
+  }
+  .team-builder {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 3;
+    grid-column: 4 / 7;
+    grid-row: span 3;
+  }
+  .karma {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 3;
+    grid-column: 4 / 7;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 2;
+    grid-row: 4 / 6;
+  }
+  .calculator {
+    grid-column: 7 / -1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    grid-row: 3 / 6;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  gap: 15px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header .header-title {
+  color: #4c4e61;
+  width: 350px;
+}
+
+.header .header-title span {
+  font-weight: 300;
+}
+
+@media screen and (min-width: 1000px) {
+  .header .header-title {
+    font-size: 35px;
+    width: 500px;
+  }
+}
+
+.header .header-subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  width: 85%;
+  color: #a3a5ae;
+}
+
+@media screen and (min-width: 1000px) {
+  .header .header-subtitle {
+    /* font-size: 35px; */
+    width: 550px;
+  }
+}
+
+.main-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80%;
+      grid-template-columns: 80%;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.main-cards .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  background-color: white;
+  height: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 3px 2px 20px 20px #f4f7f8;
+          box-shadow: 3px 2px 20px 20px #f4f7f8;
+  padding: 20px 0 0 20px;
+}
+
+.main-cards .cards h3 {
+  color: #4c4e61;
+}
+
+.main-cards .cards p {
+  padding-top: 5px;
+  color: #a3a5ae;
+  font-size: 12px;
+  width: 90%;
+}
+
+.main-cards .cards img {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+  .main-cards {
+    -ms-grid-columns: (75px)[9];
+        grid-template-columns: repeat(9, 75px);
+    -ms-grid-rows: (75px)[7];
+        grid-template-rows: repeat(7, 75px);
+    /* grid-auto-flow: column; */
+    /*  grid-template-areas: 
+        "supervision team-builder calculator"
+        ". karma ."; */
+  }
+  .main-cards .cards {
+    height: 240px;
+  }
+  .main-cards .cards img {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .main-cards {
+    -ms-grid-columns: (300px)[2];
+        grid-template-columns: repeat(2, 300px);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+}
+/*# sourceMappingURL=style.css.map */
